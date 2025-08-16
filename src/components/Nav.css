@@ -1,0 +1,276 @@
+/* Reset styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.nav {
+    background-color: #fff;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0.6rem 2rem;
+}
+
+/* Logo */
+.nav-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.nav-logo a {
+    z-index: 2;
+}
+
+.nav-logo img {
+    width: 7rem;
+    height: auto;
+    display: block;
+    z-index: 1;
+}
+
+/* Right Section */
+.nav-right {
+    display: flex;
+    align-items: center;
+}
+
+/* Navigation Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 15px;
+    transition: color 0.3s;
+    font-weight: 550;
+}
+
+.nav-links li a:hover {
+    color: #007bff;
+    text-decoration: underline;
+    text-underline-offset: 6px;
+    text-decoration-thickness: 3px;
+    text-decoration-color: #007bff;
+}
+
+.nav-links li a:active-link {
+    color: #007bff;
+    text-decoration: underline;
+}
+
+/* Login Icon */
+.login-icon {
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Get Funded Button */
+.nav-button {
+    background-color: #022C87;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-left: 5px;
+    transition: background 0.3s;
+    font-weight: 500;
+}
+
+.nav-button:hover {
+    background-color: #0056b3;
+}
+
+/* Dropdown */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-title {
+    color: #333;
+    font-size: 15px;
+    font-weight: 550;
+    cursor: pointer;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    background-color: #fff;
+    min-width: 200px;
+    padding: 10px 0;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    list-style: none;
+}
+
+.dropdown-menu li {
+    padding: 8px 20px;
+}
+
+.dropdown-menu li a {
+    color: #333;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-menu li a:hover {
+    background-color: #f0f0f0;
+}
+
+.dropdown-menu.right-aligned {
+    right: 0;
+    left: auto;
+}
+
+/* Hamburger Icon */
+.nav-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    margin-left: 20px;
+}
+
+.nav-toggle span {
+    background: #333;
+    height: 3px;
+    width: 25px;
+    margin: 4px 0;
+    transition: 0.3s;
+}
+
+/* Medium Screens */
+@media (max-width: 1024px) {
+    .nav-container {
+        padding: 0.5rem 1.5rem;
+    }
+
+    .nav-button {
+        padding: 0.6rem 0.8rem;
+        font-size: 0.8rem;
+        margin-left: 30px;
+    }
+
+    .nav-links li a {
+        font-size: 16px;
+        font-weight: 400;
+    }
+}
+
+/* Mobile Screens */
+@media (max-width: 900px) {
+    .nav-container {
+        padding: 1rem 1.5rem;
+    }
+
+    .nav-logo img {
+        width: 5rem;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 70%;
+        flex-direction: column;
+        text-align: right;
+        padding: 10px 0;
+        display: none;
+        align-items: flex-end;
+        background: white;
+    }
+
+    .nav-links.open {
+        display: flex;
+        padding: 2rem 3rem;
+        background: rgba(255, 255, 255, 0.69);
+        border-radius: 16px;
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        animation: fadeInRightToLeft 0.3s ease-in-out;
+    }
+
+    .nav-links.open li a {
+        font-size: 1rem;
+        animation: fadeInRightToLeft 0.3s ease-in-out;
+    }
+
+    .nav-links.open .nav-contact-btn {
+        display: flex;
+        justify-content: center;
+    }
+
+    .nav-links.open .nav-button {
+        display: block;
+        width: 100%;
+        text-align: right;
+        font-size: 1rem;
+        background-color: transparent;
+        color: #333;
+        animation: fadeInRightToLeft 0.3s ease-in-out;
+        font-weight: 400;
+        padding: 0 2rem 0 0;
+    }
+
+    .nav-button {
+        display: none;
+    }
+
+    .nav-toggle {
+        display: flex;
+    }
+
+    .login-icon {
+        margin-left: 10px;
+    }
+}
+
+/* Desktop fallback for open nav-links */
+@media (min-width: 901px) {
+    .nav-links.open {
+        display: flex !important;
+        flex-direction: row;
+        gap: 30px;
+        background: none;
+        padding: 0;
+        border-radius: 0;
+        backdrop-filter: none;
+    }
+}
+
+/* Animations */
+@keyframes fadeInRightToLeft {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}

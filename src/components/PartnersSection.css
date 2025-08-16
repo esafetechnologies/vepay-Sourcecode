@@ -1,0 +1,149 @@
+.partners-section {
+  padding: 50px 20px;
+  text-align: center;
+  background-color: #f9f9f9;
+}
+
+.partners-heading {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.partners-subtext {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 40px;
+}
+
+
+
+.carousel-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 1400px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.carousel-wrapper::before,
+.carousel-wrapper::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 80px;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+  mix-blend-mode: luminosity;
+  backdrop-filter: blur(1px); /* optional blur */
+}
+
+.carousel-wrapper::before {
+  left: 0;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.733), transparent);
+}
+
+.carousel-wrapper::after {
+  right: 0;
+  background: linear-gradient(to left, rgba(255, 255, 255, 0.836), transparent);
+}
+
+.carousel-track {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  will-change: transform;
+}
+
+.partner-item {
+  flex: 0 0 auto;
+  text-align: center;
+  width: 160px;
+  transition: transform 0.3s ease;
+}
+
+.partner-item img {
+  width: 140px;
+  height: 100px;
+  object-fit: contain;
+  margin-bottom: 10px;
+  transition: transform 0.3s ease;
+}
+
+.partner-item:hover,
+.partner-item:hover img {
+  transform: scale(1.2);
+}
+
+.partner-item p {
+  font-size: 0.9rem;
+  color: #444;
+}
+@media (max-width: 768px) {
+  .partners-section {
+    padding: 30px 10px;
+  }
+
+  .partners-heading {
+    font-size: 1.5rem;
+  }
+
+  .partners-subtext {
+    font-size: 0.9rem;
+    margin-bottom: 30px;
+  }
+
+  .carousel-wrapper {
+    padding: 0 10px;
+  }
+
+  .carousel-track {
+    gap: 20px;
+  }
+
+  .partner-item {
+    width: 120px;
+  }
+
+  .partner-item img {
+    width: 100px;
+    height: 80px;
+  }
+
+  .partner-item p {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .partners-heading {
+    font-size: 1.25rem;
+  }
+
+  .partners-subtext {
+    font-size: 0.85rem;
+  }
+
+  .carousel-track {
+    gap: 15px;
+  }
+
+  .partner-item {
+    width: 100px;
+  }
+
+  .partner-item img {
+    width: 80px;
+    height: 60px;
+  }
+
+  .partner-item p {
+    font-size: 0.75rem;
+  }
+
+  .carousel-wrapper::before,
+  .carousel-wrapper::after {
+    display: none; /* Optional: remove gradient on mobile for clarity */
+  }
+}

@@ -20,7 +20,7 @@ const teamMembers = [
     title: '',
     image: person2 ,
     desc: 'CTO',
-    linkedin: 'https://www.linkedin.com/in/usama-azhar-6432b560/' // Example link
+    linkedin: 'https://www.linkedin.com/in/souhail-meftah/' // Example link
   },
   {
     name: 'Usama Azhar',

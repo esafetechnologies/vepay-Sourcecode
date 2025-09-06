@@ -47,7 +47,7 @@ const Nav = () => {
                                     <li><a href="/invest-with-vepay">Invest with VePay</a></li>
                                     <li><a href="/about-us">About Us</a></li>
                                     <li><a href="/sustainability">Sustainability</a></li>
-                                    <li><a href="/insights">Insights</a></li>
+                                    <li><a href="https://insights.vepay.io">Insights</a></li>
                                 </ul>
                             )}
                         </li>

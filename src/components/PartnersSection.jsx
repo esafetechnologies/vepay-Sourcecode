@@ -16,15 +16,15 @@ const PartnersSection = () => {
     const speed = 0.5; // adjust for faster/slower
 
     const logos = [
-        { src: partner1, alt: "Amazon", name: "Amazon" },
-        { src: partner2, alt: "Walmart", name: "Walmart" },
-        { src: partner3, alt: "Shopify", name: "Shopify" },
-        { src: partner4, alt: "Wayfair", name: "Wayfair" },
-        { src: partner5, alt: "Pingpong", name: "Pingpong" },
-        { src: partner6, alt: "Usmanico", name: "Usmani & Co" },
-        { src: partner7, alt: "DHL", name: "DHL" },
-        { src: partner8, alt: "Inpay", name: "Inpay" },
-        { src: partner9, alt: "Greensfin", name: "Greensfin" }
+        { src: partner1, alt: "Amazon", name: "" },
+        { src: partner2, alt: "Walmart", name: "" },
+        { src: partner3, alt: "Shopify", name: "" },
+        { src: partner4, alt: "Wayfair", name: "" },
+        { src: partner5, alt: "Pingpong", name: "" },
+        { src: partner6, alt: "Usmanico", name: "" },
+        { src: partner7, alt: "DHL", name: "" },
+        { src: partner8, alt: "Inpay", name: "" },
+        { src: partner9, alt: "Greensfin", name: "" }
     ];
 
     useEffect(() => {
